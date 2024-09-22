@@ -2,19 +2,33 @@
   
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
     font-weight: 400;
-    color: white;
+    color: black;
     text-align: center;
 }
+
 #hero-content{
+    position: relative;
     display: flex;
     flex-direction: column;
+    /* width: fit-content; */
+    width: 100%;
+    height: fit-content;    
 }
+
+
+#hero-text{
+   position: absolute; 
+   color: white;
+   align-items: center;
+   margin: 10px;
+}
+
 #hero-text h2 {
     font-size: 24px;
 }
@@ -25,6 +39,7 @@
     background-color: #000;
     text-align: center;
     padding: 40px 0;
+    margin-top: 20PX;
 }
 #black-box-section h3{
     font-size: 80px;
@@ -39,7 +54,8 @@
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 20px;    
+    gap: 10px;   
+    column-gap: normal; 
 
 }
 .grid-item{
@@ -49,10 +65,15 @@
 }
 .card{
     max-width: 340px;
+    min-width: 200px;
     height: 400px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
 
 }
 .card-content{
@@ -64,33 +85,43 @@
 }
 
 #bottom-section{
-    margin-top: 200px;
+    margin-top: 10px;
     display: flex;
     /* background-color: #ff5733; */
     justify-content: space-between;
     padding: 20px;
+    gap: 20px;
     
 }
 #contact, #about{
     flex: 1;
-    margin: 0 20px;
+    /* margin: 10px; */
     color: white;
+    padding: 10px;
 }
 #contact{
-    background-color: red;
+    background-color: rgb(136, 43, 43);
+    /* padding: 10px; */
 }
 #about{
     background-color: #4caf50;
 }
 @media screen and (max-width: 786px) {
+    
     #hero-section{
         min-height: 50vh;
     }
     #black-box-section h3 {
         font-size: 24px;
     }
+    #black-box-section span{
+        font-size: 26px;
+    }
     #bottom-section {
         flex-direction: column;
+    }
+    #card-container-section{
+        flex-wrap: wrap;
     }
     
 }
